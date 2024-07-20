@@ -9,13 +9,14 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-a {
-    background-color: transparent;
-}
 
 abbr[title] {
     border-bottom: none;
     text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
 }
 
 img {
@@ -36,6 +37,8 @@ textarea {
 button,
 input {
     overflow: visible;
+    outline: none;
+    border: none;
 }
 
 button,
@@ -92,16 +95,4 @@ textarea {
 ::-webkit-file-upload-button {
     -webkit-appearance: button;
     font: inherit;
-}
-
-details {
-    display: block;
-}
-
-summary {
-    display: list-item;
-}
-
-[hidden] {
-    display: none;
 }
