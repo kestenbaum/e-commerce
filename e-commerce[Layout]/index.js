@@ -40,6 +40,8 @@ menuUser.onclick = () => {
     menuUserContent.classList.toggle("header__user__content--active")
 }
 
+
+//todo update array click
 menuElement.forEach(element => {
     element.onclick = () => {
         if (menuUserContent.className === "header__user__content header__user__content--active"
