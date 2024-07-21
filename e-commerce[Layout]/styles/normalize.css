@@ -16,11 +16,15 @@ abbr[title] {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 img {
     border-style: none;
+}
+
+li {
+    list-style: none;
 }
 
 button,
