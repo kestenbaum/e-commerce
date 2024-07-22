@@ -5,10 +5,6 @@
     margin: 0 auto;
 }
 
-body {
-    background-color: black;
-}
-
 /*
     HEADER START
 */
@@ -37,6 +33,7 @@ body {
 
 .header__navigate {
     background-color: #fff;
+    border-bottom:  2px solid rgb(0, 0, 0) ;
 }
 
 /* header navigate */
@@ -97,7 +94,7 @@ body {
 }
 
 /* header navigate */
-.header__navigate {
+.header__navigate__menu {
     display: flex;
     align-items: center;
     gap: 20px;
