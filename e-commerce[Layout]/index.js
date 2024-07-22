@@ -11,6 +11,11 @@ const menuUser = document.querySelector(".header__menu__user");
 const menuUserContent = document.querySelector('.header__user__content');
 const menuElement = document.querySelectorAll('.menu__element');
 
+//aside menu
+const womanMenu = document.querySelector(".woman__menu");
+const manMenu = document.querySelector(".man__menu");
+const womanSecondaryMenu = document.querySelector(".woman__menu__navigation");
+const manSecondaryMenu = document.querySelector(".man__menu__navigation");
 
 // function for dropdown
 containerDropDown.onclick = () => {
@@ -54,3 +59,19 @@ menuElement.forEach(element => {
     }
 })
 
+//function for aside
+womanMenu.onclick = () => {
+    if (womanSecondaryMenu.className === 'screen__navigation__list woman__menu__navigation') {
+        womanSecondaryMenu.classList.add('secondary__menu__navigation--active')
+    } else {
+        womanSecondaryMenu.classList.remove('secondary__menu__navigation--active')
+    }
+}
+
+manMenu.onclick = () => {
+    if (manSecondaryMenu.className === 'screen__navigation__list man__menu__navigation') {
+        manSecondaryMenu.classList.add('secondary__menu__navigation--active')
+    } else {
+        manSecondaryMenu.classList.remove('secondary__menu__navigation--active')
+    }
+}
