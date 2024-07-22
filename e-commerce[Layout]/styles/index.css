@@ -194,7 +194,7 @@
 @media all and (max-width: 790px) {
     .header__discount__wrapper {
         flex-direction: column;
-        margin: 10px 0;
+        padding-top: 20px;
     }
 
     .header__navigate__wrapper {
@@ -209,6 +209,7 @@
 
     .header__discount__wrapper {
         flex-direction: row;
+        padding-bottom: 20px;
     }
 
     .input__menu__search {
