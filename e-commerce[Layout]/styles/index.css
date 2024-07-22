@@ -228,6 +228,11 @@
     start screen navigation
 */
 
+.screen__navigation__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
 .screen__navigation__menu {
     border-right: 2px solid black;
     max-width: 245px;
@@ -238,7 +243,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 220px;
+    width: 220px;
     padding: 25px;
 }
 
@@ -266,6 +271,7 @@
     background: rgba(0, 0, 0, 0.04);
     padding: 18px 20px;
     display: none;
+    z-index: 99;
 }
 
 .woman__menu__navigation li, .man__menu__navigation li {
@@ -277,4 +283,120 @@
 }
 /*
     end screen navigation
+*/
+
+/*
+   start slider first screen
+*/
+.swiper {
+    width: 892px;
+    height: 344px;
+}
+
+.swiper-slide {
+    background-color: black;
+    color: white;
+}
+
+.swiper-pagination-bullet {
+    background-color: red;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.screen__slider {
+    padding: 40px;
+}
+
+.swiper__slide__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.slide__information {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    gap: 20px;
+}
+
+.title__slide {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.title__slide span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.description__slide {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.link__slide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px
+}
+
+.link__slide span {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    text-decoration: underline;
+}
+
+@media all and (max-width: 1175px) {
+    .screen__navigation__menu {
+        display: none;
+    }
+    .screen__navigation__wrapper {
+        justify-content: center;
+    }
+}
+@media  all and (max-width: 900px) {
+    .swiper {
+        width: 600px;
+    }
+    .slide__information {
+        padding: 60px 20px;
+    }
+    .description__slide {
+        font-size: 24px;
+    }
+    .link__slide span {
+        font-size: 14px;
+    }
+}
+@media all and (max-width: 600px) {
+    .swiper {
+        width: 320px;
+        height: 200px;
+    }
+    .slide__information {
+        padding: 20px;
+    }
+    .slide__img img {
+        width: 150px;
+        height: 100px;
+    }
+    .description__slide {
+        font-size: 18px;
+    }
+    .link__slide span {
+        font-size: 12px;
+    }
+    .title__slide img {
+        width: 20px;
+        height: 20px;
+    }
+}
+/*
+    end slider first screen
 */

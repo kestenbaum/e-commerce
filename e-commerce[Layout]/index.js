@@ -75,3 +75,13 @@ manMenu.onclick = () => {
         manSecondaryMenu.classList.remove('secondary__menu__navigation--active')
     }
 }
+
+// Sliders
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+});
+
