@@ -17,6 +17,12 @@ const manMenu = document.querySelector(".man__menu");
 const womanSecondaryMenu = document.querySelector(".woman__menu__navigation");
 const manSecondaryMenu = document.querySelector(".man__menu__navigation");
 
+// Timer
+const timeDaySelector = document.querySelector(".time__day");
+const timeHoursSelector = document.querySelector(".time__hours");
+const timeMinutesSelector = document.querySelector(".time__minutes");
+const timeSecondsSelector = document.querySelector(".time__seconds");
+
 // function for dropdown
 containerDropDown.onclick = () => {
     languageArrow.classList.toggle("active")
@@ -84,4 +90,34 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
     },
 });
+
+// Timer
+let timerInterval;
+const startingSeconds = 4 * 24 * 60 * 60; // 4 days in seconds
+let remainingSeconds = startingSeconds;
+
+function startTimer() {
+    if (!timerInterval) {
+        timerInterval = setInterval(() => {
+            remainingSeconds--;
+            formatTime(remainingSeconds);
+        }, 1000);
+    }
+}
+
+function formatTime(sec) {
+    let days = Math.floor(sec / (24 * 3600));
+    let hrs = Math.floor((sec % (24 * 3600)) / 3600);
+    let mins = Math.floor((sec % 3600) / 60);
+    let secs = sec % 60;
+
+    timeDaySelector.innerHTML = days;
+    timeHoursSelector.innerHTML = hrs;
+    timeMinutesSelector.innerHTML = mins;
+    timeSecondsSelector.innerHTML = secs;
+}
+
+startTimer();
+
+
 
