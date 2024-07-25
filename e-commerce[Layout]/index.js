@@ -92,6 +92,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 // Timer
+
 let timerInterval;
 const startingSeconds = 4 * 24 * 60 * 60; // 4 days in seconds
 let remainingSeconds = startingSeconds;
@@ -115,6 +116,8 @@ function formatTime(sec) {
     timeHoursSelector.innerHTML = hrs;
     timeMinutesSelector.innerHTML = mins;
     timeSecondsSelector.innerHTML = secs;
+
+    const timeArray = [days, hrs, mins, secs];
 }
 
 startTimer();
