@@ -407,7 +407,7 @@
 .flash__sales {
     padding: 30px 0;
 }
-.flash__sales__title {
+.main__title{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -421,7 +421,7 @@
     margin-bottom: 24px;
 }
 
-.sales__title__element {
+.title__element {
     display: flex;
     height: 40px;
     width: 20px;
@@ -585,4 +585,24 @@
 }
 /*
     end flash sales
+*/
+
+/*
+    start section category
+*/
+.category {
+    padding: 60px 0;
+}
+
+.sub__title {
+    color: rgb(0, 0, 0);
+    font-family: Inter, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 4%;
+    text-align: left;
+}
+/*
+    end section category
 */
