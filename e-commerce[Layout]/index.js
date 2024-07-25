@@ -119,5 +119,6 @@ function formatTime(sec) {
 
 startTimer();
 
+// todo update array for timer
 
 
