@@ -24,24 +24,18 @@ const timeMinutesSelector = document.querySelector(".time__minutes");
 const timeSecondsSelector = document.querySelector(".time__seconds");
 
 // function for dropdown
-containerDropDown.onclick = () => {
+containerDropDown.onclick = () =>
     languageArrow.classList.toggle("active")
-}
 
-languageSelectButton.onclick = () => {
+languageSelectButton.onclick = () =>
     languageContent.style.display = languageContent.style.display === "flex" ? "none" : "flex";
-}
 
 languageButton.forEach(element => {
     element.onclick = (event)  => {
-       const changeLanguage= event.target.textContent;
-       selectedLanguage.textContent  = changeLanguage;
-
-       if (!containerDropDown.contains(event.target)) {
-           languageContent.style.display = "flex"
-       } else {
-           languageContent.style.display = "none"
-       }
+        selectedLanguage.textContent  = event.target.textContent;
+        !containerDropDown.contains(event.target)
+           ? languageContent.style.display = "flex"
+           : languageContent.style.display = "none"
    }
 })
 
@@ -50,7 +44,6 @@ menuUser.onclick = () => {
     menuUser.classList.toggle("header__menu__user--active")
     menuUserContent.classList.toggle("header__user__content--active")
 }
-
 
 //todo update array click
 menuElement.forEach(element => {
@@ -67,19 +60,17 @@ menuElement.forEach(element => {
 
 //function for aside
 womanMenu.onclick = () => {
-    if (womanSecondaryMenu.className === 'screen__navigation__list woman__menu__navigation') {
-        womanSecondaryMenu.classList.add('secondary__menu__navigation--active')
-    } else {
-        womanSecondaryMenu.classList.remove('secondary__menu__navigation--active')
-    }
+    const womanTokenList = womanSecondaryMenu.classList;
+    womanSecondaryMenu.className === 'screen__navigation__list woman__menu__navigation'
+        ? womanTokenList.add('secondary__menu__navigation--active')
+        : womanTokenList.remove('secondary__menu__navigation--active')
 }
 
 manMenu.onclick = () => {
-    if (manSecondaryMenu.className === 'screen__navigation__list man__menu__navigation') {
-        manSecondaryMenu.classList.add('secondary__menu__navigation--active')
-    } else {
-        manSecondaryMenu.classList.remove('secondary__menu__navigation--active')
-    }
+    const manTokenList = manSecondaryMenu.classList;
+    manSecondaryMenu.className === 'screen__navigation__list man__menu__navigation'
+        ? manTokenList.add('secondary__menu__navigation--active')
+        : manTokenList.remove('secondary__menu__navigation--active')
 }
 
 // Sliders
@@ -92,36 +83,30 @@ const swiper = new Swiper('.swiper', {
 });
 
 // Timer
-
 let timerInterval;
-const startingSeconds = 4 * 24 * 60 * 60; // 4 days in seconds
-let remainingSeconds = startingSeconds;
+let startingSeconds = 4 * 24 * 60 * 60;
 
 function startTimer() {
     if (!timerInterval) {
         timerInterval = setInterval(() => {
-            remainingSeconds--;
-            formatTime(remainingSeconds);
+            startingSeconds--;
+            formatTime(startingSeconds);
         }, 1000);
     }
 }
 
 function formatTime(sec) {
-    let days = Math.floor(sec / (24 * 3600));
-    let hrs = Math.floor((sec % (24 * 3600)) / 3600);
-    let mins = Math.floor((sec % 3600) / 60);
-    let secs = sec % 60;
+    const days = Math.floor(sec / (24 * 3600));
+    const hrs = Math.floor((sec % (24 * 3600)) / 3600);
+    const minutes = Math.floor((sec % 3600) / 60);
+    const secs = sec % 60;
 
     timeDaySelector.innerHTML = days;
     timeHoursSelector.innerHTML = hrs;
-    timeMinutesSelector.innerHTML = mins;
+    timeMinutesSelector.innerHTML = minutes;
     timeSecondsSelector.innerHTML = secs;
-
-    const timeArray = [days, hrs, mins, secs];
 }
 
 startTimer();
-
-// todo update array for timer
 
 
