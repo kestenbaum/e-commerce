@@ -760,3 +760,23 @@
 /*
     end section selling products
 */
+
+/*
+    start footer
+*/
+
+.footer {
+    background-color: black;
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+}
+
+.footer__wrapper a {
+    font-size: 18px;
+    color: white;
+}
