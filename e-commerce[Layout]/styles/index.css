@@ -821,3 +821,13 @@
     font-size: 16px;
     font-weight: 400;
 }
+
+.explore__products {
+    padding: 60px 0;
+}
+
+.explore__product__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
