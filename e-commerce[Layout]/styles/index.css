@@ -831,3 +831,13 @@
     flex-direction: column;
     gap: 40px;
 }
+
+.arrival {
+    padding: 60px 0;
+}
+
+.arrival__title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
