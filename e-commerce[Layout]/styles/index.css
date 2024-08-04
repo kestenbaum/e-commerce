@@ -928,3 +928,17 @@
     height: 56px;
     cursor: pointer;
 }
+
+.login__btn__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login__btn__wrapper {
+    color: rgb(219, 68, 68);
+}
+
+.log__btn {
+    padding: 0 48px;
+}
